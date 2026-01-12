@@ -198,8 +198,6 @@ def choose_new_target():
         else:
             timer_label.config(text=f"Time: {final_time:.1f}s")
         return
-    
-    
 
     target_state = random.choice(list(remaining_states))
     status.config(text=f"Click on: {target_state}  ({len(remaining_states)} left)")
@@ -278,7 +276,6 @@ def state_clicked(x, y):
 
     candidates = states.iloc[candidate_idx]
 
-    
     hits = candidates[candidates.covers(pt)]
     if hits.empty:
         return None
